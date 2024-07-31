@@ -62,6 +62,8 @@ celery -A send_email worker -l info
 git remote rm origin
 git remote add origin https://github.com/nesrv/celery_django.git
 
+
+git reset venv
 ```
 
 

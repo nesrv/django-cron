@@ -2,7 +2,7 @@ from celery import shared_task
 # from celery.task import periodic_task
 from celery.schedules import crontab
 from datetime import timedelta
-
+from django_cron.celery import app
 
 
 # @app.on_after_configure.connect
@@ -48,4 +48,9 @@ def mul(x, y):
 def xsum(numbers):
     return sum(numbers)
 
+
+@app.task()
+def write_file(email):
+    send(email)
+    return True
 
