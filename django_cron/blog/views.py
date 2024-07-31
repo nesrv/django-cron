@@ -3,7 +3,7 @@ from django.views.generic import CreateView
 from .models import Contact
 from .forms import ContactForm
 from .tasks import write_file
-
+from .service import send
 
 class ContactView(CreateView):
     model = Contact
@@ -14,6 +14,8 @@ class ContactView(CreateView):
 
     def form_valid(self, form):
         form.save()
-        write_file.delay(form.instance.email)
+        send(form.instance.email)
+
+        # write_file.delay(form.instance.email)
         return super().form_valid(form)
 

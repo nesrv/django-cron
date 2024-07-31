@@ -139,3 +139,20 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': 15.0,
         },
     }
+
+
+#smtp
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'n4tanan@yandex.ru'
+EMAIL_HOST_PASSWORD = 'jpymviiihhbtzhdo' 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_PORT = 587
+
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# SERVER_EMAIL = EMAIL_HOST_USER
+# EMAIL_ADMIN = EMAIL_HOST_USER
+
+
+
