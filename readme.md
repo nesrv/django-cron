@@ -42,6 +42,8 @@ python manage.py makemigrations
 
 ```sh
 docker run -p 127.0.0.1:16379:6379 --name redis-celery -d redis
+
+docker run -it --rm --name redis -p 6379:6379 redis
 ```
 
 
