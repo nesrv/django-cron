@@ -5,20 +5,7 @@ from datetime import timedelta
 from django_cron.celery import app
 
 
-# @app.on_after_configure.connect
 
-# @periodic_task(run_every=timedelta(seconds=30))
-# def test():
-#     print('test')
-#     return 'test'
-#     # return 'test'
-
-
-# @periodic_task(run_every=crontab(minute=0, hour=0))
-# def test2():
-#     print('test2')
-#     return 'test2'
-#     # return 'test2'
 COUNTER = 0
 
 @shared_task
@@ -49,8 +36,8 @@ def xsum(numbers):
     return sum(numbers)
 
 
-@app.task()
-def write_file(email):
-    send(email)
-    return True
+# @app.task()
+# def write_file(email):
+#     send(email)
+#     return True
 

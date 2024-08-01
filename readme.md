@@ -1,5 +1,6 @@
 # Demo project Celery + Django
 
+[hНастраиваем Cron в Django (Celery + Redis)](https://youtu.be/JzTdURgzOpw?si=uIayFyrj_3Wg7zFO)
 ## first
 
 ```sh
